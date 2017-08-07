@@ -1,0 +1,6 @@
+node_modules
+/react-client/dist/bundle.js
+
+## API keys ##
+/react-client/src/config/wordNik.js
+compiled/config/wordNik.js
