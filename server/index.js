@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-
+require('bootstrap');
 var items = require('../database-mongo');
 
 var app = express();

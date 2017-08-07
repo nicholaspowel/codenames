@@ -8,7 +8,11 @@ const Options = (props) => (
     <button className="btn hidden-sm-down">
       <span className="glyphicon glyphicon-search">Search</span>
     </button>
-
+    <div className="viewMode">
+      <button className="btn hidden-sm-down">
+      	 <span className="Spy">Spymaster</span>
+      </button>
+    </div>
   </div>
 )
 
