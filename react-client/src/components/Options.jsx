@@ -6,7 +6,7 @@ const Options = (props) => (
     <div></div>
     <input className="form-control" type="text" onChange={(e) => props.handleInputChange(e.target.value)} />
     <button className="btn hidden-sm-down">
-      <span className="glyphicon glyphicon-search"></span>
+      <span className="glyphicon glyphicon-search">Search</span>
     </button>
 
   </div>
