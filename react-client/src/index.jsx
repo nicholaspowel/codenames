@@ -7,7 +7,7 @@ import Options from './components/Options.jsx';
 // import API_KEY from './lib/wordRequest.js';
 import API_KEY from './config/wordNik';
 // import axios from 'axios';
-// import Utilities from './utilities.jsx';
+import Utilities from './utilities.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -33,7 +33,7 @@ class App extends React.Component {
 
   colorize(array){
     var colors=['blue','blue','blue','blue','blue','blue','blue','blue','blue','red','red','red','red','red','red','red','red','yellow','yellow','yellow','yellow','yellow','yellow','yellow','black'];
-    var colOrder = this.randomize(colors);
+    var colOrder = Utilities.randomize(colors);
     for (var i = 0; i < array.length; i++) {
       array[i].color=colOrder[i];
     }
@@ -46,7 +46,7 @@ class App extends React.Component {
       url: `http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&excludePartOfSpeech=proper-noun&minCorpusCount=700&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=12&limit=25&api_key=${API_KEY}`, 
       success: (data) => {
         console.log('data', data);
-        data = this.randomize(data);
+        data = Utilities.randomize(data);
         data = this.colorize(data);
         this.setState({
           items: data,

@@ -1,33 +1,32 @@
 
 var Utilities = {
 
-	this.randomize = (array, callback)=>{
-		var newArray = [];
+	randomize(array, callback){
 		//takes in an array of values and returns a randomized array
-		callback === undefined ? callback= (item)=>{return item;}: callback = callback;
+		callback === undefined ? callback = (item)=>{return item;}: callback = callback;
 		for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
     }
-    console.log('shuffled', array);
-    array.forEach(callback(item));
-    console.log('calledback', array);
+    // console.log('shuffled', array);
+    array.forEach(callback);
+    // console.log('calledback', array);
     return array;
-	}
+	},
 
 	GET(req, res){
 
-	}
+	},
 
 	POST(req, res){
 
-	}
+	},
 
 	generate(theme){
 		//initiates a get request to WordNik, returns an array
-	}
+	},
 
 	lockBoard(){
 		// switches the board to be uneditable and saves
@@ -65,4 +64,10 @@ export default Utilities;
 // display colors(spymaster)(toggle)
 
 // board array(array of objects, ish?)
+
+//####Cards Against Humanity cards
+//https://www.crhallberg.com/cah/json/
+//https://github.com/amaldare93/cards-for-humanity
+//https://github.com/vdel26/cah-node-api
+
 
