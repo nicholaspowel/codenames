@@ -54,7 +54,11 @@ var Utilities = {
     else if(tile.color === 'black'){
       console.log('black');
     }
-  }
+  }, 
+
+  spymaster(){
+    //runs tileClick on all tiles, or otherwise sets every tile to show its color
+  };
 
 };
 
