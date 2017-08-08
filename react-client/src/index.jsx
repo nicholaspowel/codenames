@@ -13,23 +13,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      items: []
+      board: []
     }
-  }
-  
-  randomize(array, callback){
-    var newArray = [];
-    //takes in an array of values and returns a randomized array
-    callback === undefined ? callback= (item)=>{return item;}: callback = callback;
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-    array.forEach(callback);
-    return array;
-  }
+  } 
 
   colorize(array){
     var colors=['blue','blue','blue','blue','blue','blue','blue','blue','blue','red','red','red','red','red','red','red','red','yellow','yellow','yellow','yellow','yellow','yellow','yellow','black'];
@@ -49,7 +35,7 @@ class App extends React.Component {
         data = Utilities.randomize(data);
         data = this.colorize(data);
         this.setState({
-          items: data,
+          board: data,
         })
       },
       error: (err) => {
@@ -62,7 +48,7 @@ class App extends React.Component {
     return (<div>
       <h1>Code Names Against Humanity</h1>
       <Options/>
-      <List items={this.state.items}/>
+      <List board={this.state.board} Utilities ={Utilities}/>
     </div>)
   }
 }

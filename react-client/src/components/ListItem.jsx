@@ -1,9 +1,9 @@
 import React from 'react';
 
 const ListItem = (props) => (
-  <div className='tile' onClick={(e) => props.tileClick(e.target.value)}>
+  <div className='tile' onClick={(e) => props.Utilities.tileClick(props.tile)}>
   	<div className='word'>
-    { props.item.word }
+    { props.tile.word }
     </div>
   </div>
 )

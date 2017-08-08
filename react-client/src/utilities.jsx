@@ -17,20 +17,44 @@ var Utilities = {
 	},
 
 	GET(req, res){
-
+    //retrieve a board from the database
 	},
 
 	POST(req, res){
-
+    //save a board to the database
 	},
 
 	generate(theme){
-		//initiates a get request to WordNik, returns an array
-	},
+		if(theme === 'CAH' || theme === 'Cards Against Humanity'){
+      //create theme by calling the randomize function on the CAH white card array
+    }
+    else{
+    //initiates a get request to WordNik, returns an array
+    }
+  },
 
 	lockBoard(){
 		// switches the board to be uneditable and saves
-	}
+    // called when a post is made
+	},
+
+  tileClick(tile){
+    console.log(tile);
+    //changes the tile to reveal color/team image when not in spymaster mode
+    if(tile.color === 'blue'){
+      console.log('blue');
+    }
+    else if(tile.color === 'red'){
+      console.log('red');
+    }
+
+    else if(tile.color === 'yellow'){
+      console.log('yellow');
+    }
+    else if(tile.color === 'black'){
+      console.log('black');
+    }
+  }
 
 };
 
