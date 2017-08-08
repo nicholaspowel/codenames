@@ -25,3 +25,15 @@ div#Board {
 	padding: 23%;
 }
 
+div#Options {
+    display: flex;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    background-image: url(https://s-media-cache-ak0.pinimg.com/originals/f3/7d/05/f37d05e78b5bba171074ecefb1884f49.jpg);
+}
