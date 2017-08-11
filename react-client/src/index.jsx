@@ -19,7 +19,10 @@ class App extends React.Component {
       board: []
     },
     Utilities.randomCAH = Utilities.randomCAH.bind(this),
-    Utilities.generate = Utilities.generate.bind(this)
+    Utilities.generate = Utilities.generate.bind(this),
+    Utilities.tileClick = Utilities.tileClick.bind(this),
+    Utilities.spyMaster = Utilities.spyMaster.bind(this),
+    Utilities.saveBoard = Utilities.saveBoard.bind(this)
   } 
 
   colorize(array){
@@ -57,7 +60,7 @@ class App extends React.Component {
   render () {
     return (<div>
       <h1>Code Names Against Humanity</h1>
-      <Options/>
+      <Options Utilities = {Utilities}/>
       <List board={this.state.board} Utilities = {Utilities}/>
     </div>)
   }

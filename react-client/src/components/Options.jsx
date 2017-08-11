@@ -9,12 +9,12 @@ const Options = (props) => (
     <button className="btn hidden-sm-down" onClick={(e)=> props.handleClick('search')}>
       <span className="glyphicon glyphicon-search">Search</span>
     </button>
-    <div className="generate" onClick={(e)=> props.handleClick('generate')}>
+    <div className="generate" onClick={(e)=> props.Utilities.generate()}>
       <button className="btn hidden-sm-down">
          <span className="spawn">Generate Board</span>
       </button>
     </div>
-    <div className="viewMode" onClick={(e)=> props.handleClick('viewMode')}>
+    <div className="viewMode" onClick={(e)=> props.Utilities.spyMaster()}>
       <button className="btn hidden-sm-down">
       	 <span className="Spy">Spymaster</span>
       </button>

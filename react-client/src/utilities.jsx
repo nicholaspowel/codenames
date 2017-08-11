@@ -26,14 +26,16 @@ var Utilities = {
 
 	generate(theme){
 		if(theme === 'CAH' || theme === 'Cards Against Humanity'){
+      console.log('will make a list from CAH');
       //create theme by calling the randomize function on the CAH white card array
     }
     else{
+      console.log('theme', theme);
     //initiates a get request to WordNik, returns an array
     }
   },
 
-	lockBoard(){
+	saveBoard(array, callback){
 		// switches the board to be uneditable and saves
     // called when a post is made
 	},
@@ -43,34 +45,35 @@ var Utilities = {
     //changes the tile to reveal color/team image when not in spymaster mode
     if(tile.color === 'blue'){
       console.log('blue');
-      console.log(this.state);
+      console.log(this);
     }
     else if(tile.color === 'red'){
       console.log('red');
-      console.log(this.state);
+      console.log(this);
     }
 
     else if(tile.color === 'yellow'){
       console.log('yellow');
-      console.log(this.state);
+      console.log(this);
     }
     else if(tile.color === 'black'){
       console.log('black');
-      console.log(this.state);
+      console.log(this);
     }
   }, 
 
-  spymaster(){
+  spyMaster(){
+    console.log('spyMaster has been clicked');
     //runs tileClick on all tiles, or otherwise sets every tile to show items color
   },
 
   randomCAH(array, callback){
     //takes in an array of values and returns an array of 25 random values
     var results = [];
-    var arr1=array.slice();
+    var arr1=array.slice(0);
     callback === undefined ? callback = (item)=>{return item;}: callback = callback;
     for(var i =0; i < 25; i++) {
-      var j = Math.floor(Math.random() * (array.length + 1));
+      var j = Math.floor(Math.random() * (arr1.length + 1));
       var content = arr1.splice(j, 1);
       results.push({"word": content, "id": i});
     }
