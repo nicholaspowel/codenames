@@ -14,6 +14,7 @@ db.once('open', function() {
 var BoardSchema = mongoose.Schema({
   _boardId: Schema.types.ObjectId,
   boardName: String,
+  theme: String,
   words: []
 });
 

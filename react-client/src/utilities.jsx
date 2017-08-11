@@ -43,22 +43,42 @@ var Utilities = {
     //changes the tile to reveal color/team image when not in spymaster mode
     if(tile.color === 'blue'){
       console.log('blue');
+      console.log(this.state);
     }
     else if(tile.color === 'red'){
       console.log('red');
+      console.log(this.state);
     }
 
     else if(tile.color === 'yellow'){
       console.log('yellow');
+      console.log(this.state);
     }
     else if(tile.color === 'black'){
       console.log('black');
+      console.log(this.state);
     }
   }, 
 
   spymaster(){
-    //runs tileClick on all tiles, or otherwise sets every tile to show its color
-  };
+    //runs tileClick on all tiles, or otherwise sets every tile to show items color
+  },
+
+  randomCAH(array, callback){
+    //takes in an array of values and returns an array of 25 random values
+    var results = [];
+    var arr1=array.slice();
+    callback === undefined ? callback = (item)=>{return item;}: callback = callback;
+    for(var i =0; i < 25; i++) {
+      var j = Math.floor(Math.random() * (array.length + 1));
+      var content = arr1.splice(j, 1);
+      results.push({"word": content, "id": i});
+    }
+    // console.log('shuffled', array);
+    array.forEach(callback);
+    // console.log('calledback', array);
+    return results;
+  },
 
 };
 
@@ -97,5 +117,5 @@ export default Utilities;
 //https://www.crhallberg.com/cah/json/
 //https://github.com/amaldare93/cards-for-humanity
 //https://github.com/vdel26/cah-node-api
-
+// .whiteCards[i] gives access to ith white card text
 

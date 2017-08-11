@@ -7,6 +7,7 @@ var app = express();
 
 
 app.use(express.static(__dirname + '/../react-client/dist'));
+app.use(bodyParser.json());
 
 app.get('/boards', function (req, res) {
   boards.selectAll(function(err, data) {

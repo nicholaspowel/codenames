@@ -4,17 +4,22 @@ import $ from 'jquery';
 import List from './components/List.jsx';
 import Swagger from 'swagger-client';
 import Options from './components/Options.jsx';
-// import API_KEY from './lib/wordRequest.js';
+// import wordRequest from './lib/wordRequest.js';
 import API_KEY from './config/wordNik';
-// import axios from 'axios';
+import axios from 'axios';
 import Utilities from './utilities.jsx';
+import cardList from './data/CardsAgainstHumanity.js';
+console.log(cardList.cards.whiteCards);
+var whiteCards = cardList.cards.whiteCards;
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
       board: []
-    }
+    },
+    Utilities.randomCAH = Utilities.randomCAH.bind(this),
+    Utilities.generate = Utilities.generate.bind(this)
   } 
 
   colorize(array){
@@ -40,6 +45,11 @@ class App extends React.Component {
       },
       error: (err) => {
         console.log('err', err);
+        var data = Utilities.randomCAH(whiteCards);
+        data = this.colorize(data);
+        this.setState({
+          board: data,
+        })
       }
     });
   }
@@ -48,7 +58,7 @@ class App extends React.Component {
     return (<div>
       <h1>Code Names Against Humanity</h1>
       <Options/>
-      <List board={this.state.board} Utilities ={Utilities}/>
+      <List board={this.state.board} Utilities = {Utilities}/>
     </div>)
   }
 }
