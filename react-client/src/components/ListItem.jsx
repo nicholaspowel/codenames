@@ -1,11 +1,25 @@
 import React from 'react';
 
-const ListItem = (props) => (
-  <div className='tile' onClick={(e) => props.Utilities.tileClick(props.tile)}>
-  	<div className='word'>
-    { props.tile.word }
-    </div>
-  </div>
-)
+class ListItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      color: this.props.color
+    }
+  }
+  
+
+render(){
+  const styleObj = {
+    background: "black",
+  }
+    return(
+      <div className='tile' style={styleObj} onClick={(e) => this.props.Utilities.tileClick(this.props.tile)}>
+        <div className='word'>
+          { this.props.tile.word }
+        </div>
+      </div>      
+  	)}
+}
 
 export default ListItem;
