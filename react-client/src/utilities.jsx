@@ -1,3 +1,8 @@
+import $ from 'jquery';
+import cardList from './data/CardsAgainstHumanity.js';
+import API_KEY from './config/wordNik';
+
+var whiteCards = cardList.cards.whiteCards;
 
 var Utilities = {
 
@@ -27,10 +32,34 @@ var Utilities = {
 	generate(theme){
 		if(theme === 'CAH' || theme === 'Cards Against Humanity'){
       console.log('will make a list from CAH');
+      var data = Utilities.randomCAH(whiteCards);
+        data = this.colorize(data);
+        this.setState({
+          board: data,
+        })
       //create theme by calling the randomize function on the CAH white card array
     }
     else{
       console.log('theme', theme);
+      $.ajax({
+      url: `http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&excludePartOfSpeech=proper-noun&minCorpusCount=700&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=12&limit=25&api_key=${API_KEY}`, 
+      success: (data) => {
+        console.log('data', data);
+        data = Utilities.randomize(data);
+        data = this.colorize(data);
+        this.setState({
+          board: data,
+        })
+      },
+      error: (err) => {
+        console.log('err', err);
+        var data = Utilities.randomCAH(whiteCards);
+        data = this.colorize(data);
+        this.setState({
+          board: data,
+        })
+      }
+    })
     //initiates a get request to WordNik, returns an array
     }
   },
@@ -46,24 +75,43 @@ var Utilities = {
     if(tile.color === 'blue'){
       console.log('blue');
       console.log(this);
+      tile.isClicked = 1;
+      return tile;
     }
     else if(tile.color === 'red'){
       console.log('red');
       console.log(this);
+      tile.isClicked = 1;
+      return tile;
     }
 
     else if(tile.color === 'yellow'){
       console.log('yellow');
       console.log(this);
+      tile.isClicked = 1;
+      return tile;
+    
     }
     else if(tile.color === 'black'){
       console.log('black');
       console.log(this);
+      tile.isClicked = 1;
+      return tile;
     }
   }, 
 
   spyMaster(){
     console.log('spyMaster has been clicked');
+    var newBoard = this.state.board.slice();
+    newBoard.forEach((obj)=>{
+      obj.display = 1;
+      console.log('mod obj', obj);
+    });
+    console.log('newBoard', newBoard);
+    this.setState({
+      board: newBoard,
+    });
+    console.log('spy', this.state.board);
     //runs tileClick on all tiles, or otherwise sets every tile to show items color
   },
 

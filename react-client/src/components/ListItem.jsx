@@ -10,8 +10,12 @@ class ListItem extends React.Component {
   
 
 render(){
+
   const styleObj = {
     background: "black",
+  }
+  if(this.props.tile.isClicked){
+    styleObj.background = this.props.color;
   }
     return(
       <div className='tile' style={styleObj} onClick={(e) => this.props.Utilities.tileClick(this.props.tile)}>

@@ -9,6 +9,9 @@ const Options = (props) => (
     <button className="btn hidden-sm-down" onClick={(e)=> props.handleClick('search')}>
       <span className="glyphicon glyphicon-search">Search</span>
     </button>
+    <div className="boardGen">
+      <input className="form-control" type="text" onChange={(e) => props.handleInputChange(e.target.value)} />
+    </div>
     <div className="generate" onClick={(e)=> props.Utilities.generate()}>
       <button className="btn hidden-sm-down">
          <span className="spawn">Generate Board</span>
