@@ -4,7 +4,8 @@ class ListItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      color: this.props.tile.color
+      color: this.props.tile.color,
+      display: this.props.tile.display
     }
   }
   
@@ -18,7 +19,7 @@ class ListItem extends React.Component {
   }
 
   toggleTile(){
-    console.log('i was clicked', this)
+    console.log('i was clicked');
     this.props.tile.display = 1;
   }
 
@@ -35,8 +36,8 @@ class ListItem extends React.Component {
       tileClass = 'tile ' + this.props.tile.color;
     }
       return(
-        <div className={tileClass} onClick={(e) => this.toggleTile.bind(this)}>
-          <div className='word'>
+        <div className={tileClass} >
+          <div className='word' onClick={this.toggleTile.bind(this)}>
             { this.props.tile.word }
           </div>
           <button className="editText btn hidden-sm-down" style={{zIndex: 2}}onClick={(e)=> this.toggleType.bind(this)}>

@@ -35,12 +35,18 @@ var Utilities = {
       })
   },
 
+  setDisplay(array){
+    array.forEach((obj)=>{ obj.display = 0});
+    return array;
+  },
+
 	generate(theme){
     console.log('theme', theme);
 		if(theme === 'CAH' || theme === 'Cards Against Humanity'){
       console.log('will make a list from CAH');
       var data = Utilities.randomCAH(whiteCards);
         data = this.colorize(data);
+        data = Utilities.setDisplay;
         this.setState({
           board: data,
         })
@@ -62,6 +68,7 @@ var Utilities = {
         console.log('err', err);
         var data = Utilities.randomCAH(whiteCards);
         data = this.colorize(data);
+        data = Utilities.setDisplay;
         this.setState({
           board: data,
         })
