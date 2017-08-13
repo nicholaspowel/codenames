@@ -9,7 +9,6 @@ import API_KEY from './config/wordNik';
 import axios from 'axios';
 import Utilities from './utilities.jsx';
 import cardList from './data/CardsAgainstHumanity.js';
-console.log(cardList.cards.whiteCards);
 var whiteCards = cardList.cards.whiteCards;
 
 class App extends React.Component {
@@ -31,7 +30,6 @@ class App extends React.Component {
     for (var i = 0; i < array.length; i++) {
       array[i].color=colOrder[i];
     }
-    console.log('colors', array);
     return array;
   }
 

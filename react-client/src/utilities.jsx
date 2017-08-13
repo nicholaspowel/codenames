@@ -105,13 +105,10 @@ var Utilities = {
     var newBoard = this.state.board.slice();
     newBoard.forEach((obj)=>{
       obj.display = 1;
-      console.log('mod obj', obj);
     });
-    console.log('newBoard', newBoard);
     this.setState({
       board: newBoard,
     });
-    console.log('spy', this.state.board);
     //runs tileClick on all tiles, or otherwise sets every tile to show items color
   },
 

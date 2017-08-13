@@ -11,34 +11,39 @@ class ListItem extends React.Component {
 
   toggleType(){
     if( displayObj.display==='none'){
-      displayObj.display = 'flex';
+      displayObj.display = 'table-row';
     } else {
       displayObj.display = 'none';
     }
   }
 
+  toggleTile(){
+    console.log('i was clicked', this)
+    this.props.tile.display = 1;
+  }
+
   render() {
     var displayObj= {
-      display: "none"
+      display: 'table-row'
     };
     var styleObj = {
-      background: "black",
+      background: 'black',
     };
-    var classObj = 'tile';
+    var tileClass = 'tile';
 
     if(this.props.tile.display){
-      classObj = 'tile ' + this.props.tile.color;
+      tileClass = 'tile ' + this.props.tile.color;
     }
       return(
-        <div className={classObj} style={styleObj} onClick={(e) => this.props.Utilities.tileClick(this.props.tile)}>
+        <div className={tileClass} onClick={(e) => this.toggleTile.bind(this)}>
           <div className='word'>
             { this.props.tile.word }
           </div>
-          <button className="btn hidden-sm-down" style={{zIndex: 2}}onClick={(e)=> this.toggleType.bind(this)}>
-            <span className="glyphicon glyphicon-search"></span>
+          <button className="editText btn hidden-sm-down" style={{zIndex: 2}}onClick={(e)=> this.toggleType.bind(this)}>
+            <span className="glyphicon glyphicon-pencil"></span>
           </button>
-          <div className='customWord'>
-            <input className="form-control" style={displayObj} type="text" onChange={(e) => props.handleInputChange(e.target.value)} />
+          <div className='customWord' style={displayObj}>
+            <input className="customWordForm form-control"  type="text" onChange={(e) => props.handleInputChange(e.target.value)} />
           </div>
         </div>      
     	)}
