@@ -4,7 +4,7 @@ class ListItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      color: this.props.color
+      color: this.props.tile.color
     }
   }
   
@@ -43,7 +43,7 @@ class ListItem extends React.Component {
             <span className="glyphicon glyphicon-pencil"></span>
           </button>
           <div className='customWord' style={displayObj}>
-            <input className="customWordForm form-control"  type="text" onChange={(e) => props.handleInputChange(e.target.value)} />
+            <input className="customWordForm form-control" type="text" onChange={(e) => this.props.tile.word = e.target.value} />
           </div>
         </div>      
     	)}

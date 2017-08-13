@@ -22,6 +22,7 @@ class App extends React.Component {
     Utilities.tileClick = Utilities.tileClick.bind(this),
     Utilities.spyMaster = Utilities.spyMaster.bind(this),
     Utilities.saveBoard = Utilities.saveBoard.bind(this)
+    
   } 
 
   colorize(array){

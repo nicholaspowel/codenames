@@ -29,7 +29,14 @@ var Utilities = {
     //save a board to the database
 	},
 
+  handleThemeChange(event){
+    this.setState({
+        theme: event,
+      })
+  },
+
 	generate(theme){
+    console.log('theme', theme);
 		if(theme === 'CAH' || theme === 'Cards Against Humanity'){
       console.log('will make a list from CAH');
       var data = Utilities.randomCAH(whiteCards);
