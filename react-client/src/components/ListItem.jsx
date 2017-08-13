@@ -20,6 +20,9 @@ class ListItem extends React.Component {
 
   toggleTile(){
     console.log('i was clicked');
+    this.setState({
+      display: 1
+    });
     this.props.tile.display = 1;
   }
 

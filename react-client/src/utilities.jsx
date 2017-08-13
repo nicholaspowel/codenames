@@ -46,7 +46,6 @@ var Utilities = {
       console.log('will make a list from CAH');
       var data = Utilities.randomCAH(whiteCards);
         data = this.colorize(data);
-        data = Utilities.setDisplay;
         this.setState({
           board: data,
         })
