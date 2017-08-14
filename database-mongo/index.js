@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/test3');
 
 var db = mongoose.connection;
 
@@ -10,9 +10,9 @@ db.on('error', function() {
 db.once('open', function() {
   console.log('mongoose connected successfully');
 });
-
-var BoardSchema = new mongoose.Schema({
-  boardId: mongoose.Schema.Types.ObjectId,
+var Schema = mongoose.Schema;
+var BoardSchema = new Schema({
+  boardId: {type: Schema.Types.ObjectId, auto: true},
   boardName: String,
   theme: String,
   board: []

@@ -22,12 +22,19 @@ var Utilities = {
     return array;
 	},
 
-	GET(req, res){
+	retrieveBoard(boardID){
     //retrieve a board from the database
-	},
-
-	POST(req, res){
-    //save a board to the database
+    axios.get('/boards', {
+      boardId: boardID
+    })
+    .then(function(response){
+      console.log('loadBoard', response.data);
+      that.setState({
+        board: response.data.board,
+        boardId: response.data.boardId,
+        theme: response.data.theme
+      });
+    });
 	},
 
   handleThemeChange(event){
@@ -42,9 +49,7 @@ var Utilities = {
   },
 
 	generate(theme){
-    console.log('theme', theme, ' is what the theme is');
 		if(theme === 'CAH' || theme === 'Cards Against Humanity'){
-      console.log('will make a list from CAH');
       var data = Utilities.randomCAH(whiteCards);
         data = this.colorize(data);
         this.setState({
@@ -54,11 +59,9 @@ var Utilities = {
       //create theme by calling the randomize function on the CAH white card array
     }
     else{
-      console.log('theme is not CAH');
       $.ajax({
       url: `http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&excludePartOfSpeech=proper-noun&minCorpusCount=700&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=12&limit=25&api_key=${API_KEY}`, 
       success: (data) => {
-        console.log('data', data);
         data = Utilities.randomize(data);
         data = this.colorize(data);
         this.setState({
@@ -85,7 +88,7 @@ var Utilities = {
     saveBoard.forEach((obj)=>{
       obj.display = 0;
     });
-
+    var that = this;
     console.log('axios', saveBoard);
     axios.post('/boards', {
       board: saveBoard,
@@ -93,8 +96,8 @@ var Utilities = {
     })
     .then(function(response){
       console.log('saveboard', response.data);
-      this.setState({
-        boardID: 'response'
+      that.setState({
+        boardID: response.data.boardId
       });
     });
     // switches the board to be uneditable and saves
