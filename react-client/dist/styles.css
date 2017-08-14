@@ -93,7 +93,7 @@ body {
     line-height: 1.42857143;
     color: #333;
     background-color: #fff;
-    background-image: url(http://www.publicdomainpictures.net/pictures/220000/velka/binare-welt-001.jpg);
+    background-image: url(./images/binare-welt-001.jpg);
 }
 
 .editText {
@@ -107,9 +107,9 @@ body {
 }
 
 .revealed {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50px 10%;
 }
 
 .tile.blue0 {
@@ -119,7 +119,8 @@ body {
 
 .tile.blue1 {
     background-color: rgba(0, 0, 255, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/business-man-middle-finger-1c-2012.png);
+    background-position: 32px -8%;
 }
 .tile.blue2 {
     background-color: rgba(0, 0, 255, 0.38);
@@ -127,7 +128,8 @@ body {
 }
 .tile.blue3 {
     background-color: rgba(0, 0, 255, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/man-in-business-suit.png);
+    background-position: 32px -8%;
 }
 .tile.blue4 {
     background-color: rgba(0, 0, 255, 0.38);
@@ -135,7 +137,8 @@ body {
 }
 .tile.blue5 {
     background-color: rgba(0, 0, 255, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/business-man-middle-finger-1c-2012.png);
+    background-position: 32px -8%;
 }
 .tile.blue6 {
     background-color: rgba(0, 0, 255, 0.38);
@@ -143,7 +146,8 @@ body {
 }
 .tile.blue7 {
     background-color: rgba(0, 0, 255, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/man-in-business-suit.png);
+    background-position: 32px -8%;
 }
 
 .tile.blue8 {
@@ -153,7 +157,8 @@ body {
 
 .tile.red0 {
     background-color: rgba(255, 0, 0, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/business-man-middle-finger-1c-2012.png);
+    background-position: 32px -8%;
 }
 
 .tile.red1 {
@@ -163,7 +168,8 @@ body {
 
 .tile.red2 {
     background-color: rgba(255, 0, 0, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/man-in-business-suit.png);
+    background-position: 32px -8%;
 }
 
 .tile.red3 {
@@ -173,7 +179,8 @@ body {
 
 .tile.red4 {
     background-color: rgba(255, 0, 0, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/business-man-middle-finger-1c-2012.png);
+    background-position: 32px -8%;
 }
 
 .tile.red5 {
@@ -183,18 +190,21 @@ body {
 
 .tile.red6 {
     background-color: rgba(255, 0, 0, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/man-in-business-suit.png);
+    background-position: 32px -8%;
 }
 
 .tile.red7 {
     background-color: rgba(255, 0, 0, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-position: 32px -8%;
 }
 
 .tile.yellow0 {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/business-man-middle-finger-1c-2012.png);
+    background-position: 32px -8%;
 }
 
 .tile.yellow1 {
@@ -205,7 +215,8 @@ body {
 .tile.yellow2 {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/man-in-business-suit.png);
+    background-position: 32px -8%;
 }
 .tile.yellow3 {
     background-color: rgba(255, 255, 0, 0.38);
@@ -215,7 +226,8 @@ body {
 .tile.yellow4 {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/business-man-middle-finger-1c-2012.png);
+    background-position: 32px -8%;
 }
 .tile.yellow5 {
     background-color: rgba(255, 255, 0, 0.38);
@@ -225,10 +237,13 @@ body {
 .tile.yellow6 {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/man-in-business-suit.png);
+    background-position: 32px -8%;
 }
 
 .tile.black {
     background-color: rgba(0, 0, 0, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/assassin-clipart-12480162-silhouette-of-hitman-with-pistol-with-silencer.png);
+    background-size: contain;
+    background-position: 127px 10%;
 }
