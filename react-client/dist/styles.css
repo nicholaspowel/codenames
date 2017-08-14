@@ -214,16 +214,17 @@ body {
 .tile.yellow0 {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-image: url(./images/business-man-middle-finger-1c-2012.png);
-    background-position: 32px -8%;
+    background-image: url(./images/15643-illustrated-silhouette-of-a-beautiful-woman-pv.png);
+    background-position: 65px -8%;
+    background-size: 74%;
 }
 
 .tile.yellow1 {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-image: url(./images/16594-illustrated-silhouette-of-a-business-woman-pv.png);
-    background-position: 63px 2%;
-    background-size: 60%;
+    background-image: url(./images/skateboard-1769537_1280.png);
+    background-position: 33px 1%;
+    background-size: contain;
 }
 .tile.yellow2 {
     background-color: rgba(255, 255, 0, 0.38);
@@ -240,22 +241,23 @@ body {
 .tile.yellow4 {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-image: url(./images/business-man-middle-finger-1c-2012.png);
-    background-position: 32px -8%;
+    background-image: url(./images/boy-2029804_1280.png);
+    background-position: 129px -8%;
+    background-size: contain;
 }
 .tile.yellow5 {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-image: url(./images/16594-illustrated-silhouette-of-a-business-woman-pv.png);
+    background-image: url(./images/affection-2025111_1280.png);
     background-position: 63px 2%;
     background-size: 60%;
 }
 .tile.yellow6 {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-image: url(./images/man-in-business-suit.png);
+    background-image: url(./images/man-305084_1280.png);
     background-position: 49px -8%;
-    background-size: 27%;
+    /*background-size: 27%;*/
 }
 
 .tile.black {
