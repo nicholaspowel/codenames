@@ -238,7 +238,8 @@ body {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
     background-image: url(./images/man-in-business-suit.png);
-    background-position: 32px -8%;
+    background-position: 49px -8%;
+    background-size: 27%;
 }
 
 .tile.black {
