@@ -124,12 +124,15 @@ body {
 }
 .tile.blue2 {
     background-color: rgba(0, 0, 255, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/16594-illustrated-silhouette-of-a-business-woman-pv.png);
+    background-position: 63px 2%;
+    background-size: 60%;
 }
 .tile.blue3 {
     background-color: rgba(0, 0, 255, 0.38);
     background-image: url(./images/man-in-business-suit.png);
-    background-position: 32px -8%;
+    background-position: 49px -8%;
+    background-size: 27%;
 }
 .tile.blue4 {
     background-color: rgba(0, 0, 255, 0.38);
@@ -142,12 +145,15 @@ body {
 }
 .tile.blue6 {
     background-color: rgba(0, 0, 255, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/16594-illustrated-silhouette-of-a-business-woman-pv.png);
+    background-position: 63px 2%;
+    background-size: 60%;
 }
 .tile.blue7 {
     background-color: rgba(0, 0, 255, 0.38);
     background-image: url(./images/man-in-business-suit.png);
-    background-position: 32px -8%;
+    background-position: 49px -8%;
+    background-size: 27%;
 }
 
 .tile.blue8 {
@@ -163,13 +169,16 @@ body {
 
 .tile.red1 {
     background-color: rgba(255, 0, 0, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/16594-illustrated-silhouette-of-a-business-woman-pv.png);
+    background-position: 63px 2%;
+    background-size: 60%;
 }
 
 .tile.red2 {
     background-color: rgba(255, 0, 0, 0.38);
     background-image: url(./images/man-in-business-suit.png);
-    background-position: 32px -8%;
+    background-position: 49px -8%;
+    background-size: 27%;
 }
 
 .tile.red3 {
@@ -185,19 +194,21 @@ body {
 
 .tile.red5 {
     background-color: rgba(255, 0, 0, 0.38);
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/16594-illustrated-silhouette-of-a-business-woman-pv.png);
+    background-position: 63px 2%;
+    background-size: 60%;
 }
 
 .tile.red6 {
     background-color: rgba(255, 0, 0, 0.38);
     background-image: url(./images/man-in-business-suit.png);
-    background-position: 32px -8%;
+    background-position: 49px -8%;
+    background-size: 27%;
 }
 
 .tile.red7 {
     background-color: rgba(255, 0, 0, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-position: 32px -8%;
 }
 
 .tile.yellow0 {
@@ -210,13 +221,16 @@ body {
 .tile.yellow1 {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/16594-illustrated-silhouette-of-a-business-woman-pv.png);
+    background-position: 63px 2%;
+    background-size: 60%;
 }
 .tile.yellow2 {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
     background-image: url(./images/man-in-business-suit.png);
-    background-position: 32px -8%;
+    background-position: 49px -8%;
+    background-size: 27%;
 }
 .tile.yellow3 {
     background-color: rgba(255, 255, 0, 0.38);
@@ -232,7 +246,9 @@ body {
 .tile.yellow5 {
     background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-image: url(./images/000-Negocios-Mujer-1.png);
+    background-image: url(./images/16594-illustrated-silhouette-of-a-business-woman-pv.png);
+    background-position: 63px 2%;
+    background-size: 60%;
 }
 .tile.yellow6 {
     background-color: rgba(255, 255, 0, 0.38);
@@ -243,8 +259,8 @@ body {
 }
 
 .tile.black {
-    background-color: rgba(0, 0, 0, 0.38);
-    background-image: url(./images/assassin-clipart-12480162-silhouette-of-hitman-with-pistol-with-silencer.png);
+        background-color: rgba(128, 128, 128, 0.38);
+    background-image: url(./images/sniper-297661_1280.png);
     background-size: contain;
-    background-position: 127px 10%;
+    background-position: center;
 }
