@@ -36,7 +36,7 @@ class ListItem extends React.Component {
     var tileClass = 'tile';
 
     if(this.props.tile.display){
-      tileClass = 'tile ' + this.props.tile.color;
+      tileClass = 'revealed tile ' + this.props.tile.color;
     }
       return(
         <div className={tileClass} >

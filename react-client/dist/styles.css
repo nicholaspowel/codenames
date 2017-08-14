@@ -23,7 +23,7 @@ div#Board {
     background: black;
     text-align: center;
     align-content: center;
-    border: 2px solid white;
+    border: 2px solid darkturquoise;
     border-radius: 5px;
     margin: 3px;
     justify-content: center;
@@ -33,7 +33,7 @@ div#Board {
 
 .tile:hover {
   transform: translate(0,-12px);
-  box-shadow: 0px 1px 8px 3px rgba(0, 0, 134, 1), 0 6px 20px 0 rgba(0, 0, 60, 0.19);
+  box-shadow: 0px 1px 8px 3px rgba(39, 219, 232, 1), 0 6px 20px 0 rgba(0, 0, 60, 0.19);
 	/*font-size: 20px;*/
 }
 
@@ -42,7 +42,44 @@ div#Board {
   vertical-align: middle;
   display: table-cell;
   width: 100%;
+  color: rgba(39, 219, 232, 1);
 
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: darkturquoise;
+    text-shadow: 0px 0px 11px rgb(39, 219, 232);
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: rgba(39,219,232, 1);
+    background-color: #fff;
+    background: rgba(39,219,232, 0.2);
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(39,219,232, 2.15);
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.form-control:focus {
+    color: rgba(39,219,232, 1);
+    background-color: #fff;
+    background: rgba(39,219,232, 0.2);
+    border: 1px solid rgba(39,219,232, 2.15);
+    outline: 0;
+}
+.btn{
+    background: rgba(39, 219, 232, 0.4);
+    color: rgba(39,219,232,1);
+    border: 1px solid rgba(39,219,232,1);
 }
 
 div#Options {
@@ -66,201 +103,132 @@ body {
 }
 
 .customWordForm {
-    margin-left: 12%;
+     margin-left: 7%;
+}
+
+.revealed {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .tile.blue0 {
-    background: blue;
-    background-size: contain;
-    background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: rgba(0, 0, 255, 0.38);
+    background-image: url(./images/000-Negocios-Mujer-1.png);  
 }
 
 .tile.blue1 {
-    background: blue;
-    background-size: contain;
+    background-color: rgba(0, 0, 255, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .tile.blue2 {
-    background: blue;
-    background-size: contain;
+    background-color: rgba(0, 0, 255, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .tile.blue3 {
-    background: blue;
-    background-size: contain;
+    background-color: rgba(0, 0, 255, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .tile.blue4 {
-    background: blue;
-    background-size: contain;
+    background-color: rgba(0, 0, 255, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .tile.blue5 {
-    background: blue;
-    background-size: contain;
+    background-color: rgba(0, 0, 255, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .tile.blue6 {
-    background: blue;
-    background-size: contain;
+    background-color: rgba(0, 0, 255, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .tile.blue7 {
-    background: blue;
-    background-size: contain;
+    background-color: rgba(0, 0, 255, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tile.blue8 {
-    background: blue;
-    background-size: contain;
+    background-color: rgba(0, 0, 255, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tile.red0 {
-    background: red;
-    background-size: contain;
+    background-color: rgba(255, 0, 0, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tile.red1 {
-    background: red;
-    background-size: contain;
+    background-color: rgba(255, 0, 0, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tile.red2 {
-    background: red;
-    background-size: contain;
+    background-color: rgba(255, 0, 0, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tile.red3 {
-    background: red;
-    background-size: contain;
+    background-color: rgba(255, 0, 0, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tile.red4 {
-    background: red;
-    background-size: contain;
+    background-color: rgba(255, 0, 0, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tile.red5 {
-    background: red;
-    background-size: contain;
+    background-color: rgba(255, 0, 0, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tile.red6 {
-    background: red;
-    background-size: contain;
+    background-color: rgba(255, 0, 0, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tile.red7 {
-    background: red;
-    background-size: contain;
+    background-color: rgba(255, 0, 0, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tile.yellow0 {
-    background: yellow;
+    background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-size: contain;
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tile.yellow1 {
-    background: yellow;
+    background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-size: contain;
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .tile.yellow2 {
-    background: yellow;
+    background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-size: contain;
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .tile.yellow3 {
-    background: yellow;
+    background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-size: contain;
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .tile.yellow4 {
-    background: yellow;
+    background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-size: contain;
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .tile.yellow5 {
-    background: yellow;
+    background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-size: contain;
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .tile.yellow6 {
-    background: yellow;
+    background-color: rgba(255, 255, 0, 0.38);
     color: black;
-    background-size: contain;
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tile.black {
-    background: black;
-    background-size: contain;
+    background-color: rgba(0, 0, 0, 0.38);
     background-image: url(./images/000-Negocios-Mujer-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }

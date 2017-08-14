@@ -12,13 +12,13 @@ db.once('open', function() {
 });
 
 var BoardSchema = mongoose.Schema({
-  _boardId: Schema.types.ObjectId,
+  boardId: mongoose.Schema.Types.ObjectId,
   boardName: String,
   theme: String,
   words: []
 });
 
-var Board = mongoose.model('Board', boardSchema);
+var Board = mongoose.model('Board', BoardSchema);
 
 var selectAll = function(callback) {
   Board.find({}, function(err, items) {
