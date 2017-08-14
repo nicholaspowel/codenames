@@ -19,12 +19,12 @@ class App extends React.Component {
       boardID: 'NA',
     }
 
-    Utilities.randomCAH = Utilities.randomCAH.bind(this),
-    Utilities.generate = Utilities.generate.bind(this),
-    Utilities.tileClick = Utilities.tileClick.bind(this),
-    Utilities.spyMaster = Utilities.spyMaster.bind(this),
-    Utilities.saveBoard = Utilities.saveBoard.bind(this),
-    Utilities.handleThemeChange = Utilities.handleThemeChange.bind(this)
+    Utilities.randomCAH = Utilities.randomCAH.bind(this);
+    Utilities.generate = Utilities.generate.bind(this);
+    Utilities.tileClick = Utilities.tileClick.bind(this);
+    Utilities.spyMaster = Utilities.spyMaster.bind(this);
+    Utilities.saveBoard = Utilities.saveBoard.bind(this);
+    Utilities.handleThemeChange = Utilities.handleThemeChange.bind(this);
   } 
 
   colorize(array){

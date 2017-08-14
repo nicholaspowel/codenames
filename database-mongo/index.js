@@ -11,7 +11,7 @@ db.once('open', function() {
   console.log('mongoose connected successfully');
 });
 
-var BoardSchema = mongoose.Schema({
+var BoardSchema = new mongoose.Schema({
   boardId: mongoose.Schema.Types.ObjectId,
   boardName: String,
   theme: String,
@@ -30,11 +30,14 @@ var retrieveBoard = function(callback) {
   });
 };
 
-var newBoard = function(data, callback) {
-  Board.create({ board: data.board, theme: data.theme}, function(err) {
+ var newBoard = function(data, callback) {
+  console.log('data.board', data.board);
+  Board.create({ board: data.board, theme: data.theme}, function(err, data) {
     if (err) {
-      return err;
-    }
+      return callback(err, null);
+    } 
+    return callback(err, data);
+
   });
 }
 

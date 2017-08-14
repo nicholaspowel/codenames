@@ -81,17 +81,18 @@ var Utilities = {
 
 	saveBoard(theme){
 		console.log('saving the state', this.state, theme);
-    this.state.board.forEach((obj)=>{
+    var saveBoard = this.state.board;
+    saveBoard.forEach((obj)=>{
       obj.display = 0;
     });
 
-    console.log('axios', axios);
+    console.log('axios', saveBoard);
     axios.post('/boards', {
-      board: this.state.board,
-      theme: this.state.theme
+      board: saveBoard,
+      theme: theme
     })
     .then(function(response){
-      console.log('saveboard', response);
+      console.log('saveboard', response.data);
       this.setState({
         boardID: 'response'
       });
