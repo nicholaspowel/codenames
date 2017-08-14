@@ -41,7 +41,8 @@ div#Board {
 	padding: 1%;
   vertical-align: middle;
   font-size: 16px;
-  font-size: 1vw;
+  font-size: 1.2vw;
+  line-height: 1.2;
   display: table-cell;
   width: 100%;
   color: rgba(39, 219, 232, 1);
