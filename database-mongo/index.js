@@ -31,9 +31,10 @@ var retrieveBoard = function(callback) {
 };
 
 var newBoard = function(data, callback) {
-  var board = new Board({
-    board: data.board,
-    theme: data.theme
+  Board.create({ board: data.board, theme: data.theme}, function(err) {
+    if (err) {
+      return err;
+    }
   });
 }
 

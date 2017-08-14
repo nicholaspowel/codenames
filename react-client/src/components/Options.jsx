@@ -4,10 +4,8 @@ class Options extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      theme: '',
     }
   }
-
   render(){
     return(
       <div id='Options'>
@@ -21,12 +19,12 @@ class Options extends React.Component {
         <div className="boardGen">
           <input className="form-control" type="text" onChange={(e) => this.props.Utilities.handleThemeChange.call(this, e.target.value)} />
         </div>
-        <div className="generate" value={this.state.theme} onClick={(e)=> this.props.Utilities.generate(this.state.theme)}>
+        <div className="generate" value={this.state.theme} onClick={(e)=> this.props.Utilities.generate(this.props.theme)}>
           <button className="btn hidden-sm-down">
              <span className="spawn">Generate Board</span>
           </button>
         </div>
-        <div className="saveBoard" onClick={(e)=> this.props.Utilities.saveBoard(this.state.theme)}>
+        <div className="saveBoard" onClick={(e)=> this.props.Utilities.saveBoard(this.props.theme)}>
           <button className="btn hidden-sm-down">
              <span className="spawn">Save Board</span>
           </button>

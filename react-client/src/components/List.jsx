@@ -9,7 +9,6 @@ class List extends React.Component {
   }
 	
   render(){ 
-    console.log('board', this.props.board);
 		return(
 		  <div>
 		  	<h4> Board: {this.props.boardID}</h4>

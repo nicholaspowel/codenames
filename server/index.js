@@ -22,11 +22,11 @@ app.get('/boards', function (req, res) {
   });
 });
 
-app.post('/saveBoard', function(req, res){
+app.post('/boards', function(req, res){
   console.log('axios saveboard');
   boards.newBoard(function(err,data){
     if(err) {
-      res.sendStatus(500);
+      res.sendStatus(300);
     } else {
       res.json(data);
     }

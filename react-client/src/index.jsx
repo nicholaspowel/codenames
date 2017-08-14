@@ -17,7 +17,8 @@ class App extends React.Component {
     this.state = { 
       board: [],
       boardID: 'NA',
-    },
+    }
+
     Utilities.randomCAH = Utilities.randomCAH.bind(this),
     Utilities.generate = Utilities.generate.bind(this),
     Utilities.tileClick = Utilities.tileClick.bind(this),
@@ -39,7 +40,6 @@ class App extends React.Component {
     $.ajax({
       url: `http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&excludePartOfSpeech=proper-noun&minCorpusCount=700&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=12&limit=25&api_key=${API_KEY}`, 
       success: (data) => {
-        console.log('data', data);
         data = Utilities.randomize(data);
         data = this.colorize(data);
         this.setState({
@@ -60,7 +60,7 @@ class App extends React.Component {
   render () {
     return (<div>
       <h1>Code Names Against Humanity</h1>
-      <Options Utilities = {Utilities}/>
+      <Options Utilities = {Utilities} theme = {this.state.theme}/>
       <List board={this.state.board} boardID={this.state.boardID} Utilities = {Utilities}/>
     </div>)
   }

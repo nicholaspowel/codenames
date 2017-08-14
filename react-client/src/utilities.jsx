@@ -42,7 +42,7 @@ var Utilities = {
   },
 
 	generate(theme){
-    console.log('theme', theme);
+    console.log('theme', theme, ' is what the theme is');
 		if(theme === 'CAH' || theme === 'Cards Against Humanity'){
       console.log('will make a list from CAH');
       var data = Utilities.randomCAH(whiteCards);
@@ -54,7 +54,7 @@ var Utilities = {
       //create theme by calling the randomize function on the CAH white card array
     }
     else{
-      console.log('theme', theme);
+      console.log('theme is not CAH');
       $.ajax({
       url: `http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&excludePartOfSpeech=proper-noun&minCorpusCount=700&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=12&limit=25&api_key=${API_KEY}`, 
       success: (data) => {
@@ -85,15 +85,15 @@ var Utilities = {
       obj.display = 0;
     });
 
-    console.log('save', this.state.board);
-    axios.post('/saveBoard', {
+    console.log('axios', axios);
+    axios.post('/boards', {
       board: this.state.board,
       theme: this.state.theme
     })
     .then(function(response){
       console.log('saveboard', response);
       this.setState({
-        boardID: response
+        boardID: 'response'
       });
     });
     // switches the board to be uneditable and saves
