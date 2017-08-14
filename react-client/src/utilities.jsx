@@ -48,6 +48,7 @@ var Utilities = {
         data = this.colorize(data);
         this.setState({
           board: data,
+          theme: theme
         })
       //create theme by calling the randomize function on the CAH white card array
     }
@@ -77,13 +78,18 @@ var Utilities = {
     }
   },
 
-	saveBoard(array, callback){
-		// switches the board to be uneditable and saves
-    // called when a post is made
+	saveBoard(theme){
+		console.log('saving the state', this.state, theme);
+    this.state.board.forEach((obj)=>{
+      obj.display = 0;
+    });
+
+    console.log('save', this.state.board);
+    // switches the board to be uneditable and saves
+    //makes a post
 	},
 
   tileClick(tile){
-    console.log(tile);
     //changes the tile to reveal color/team image when not in spymaster mode
     if(tile.color === 'blue'){
       console.log('blue');

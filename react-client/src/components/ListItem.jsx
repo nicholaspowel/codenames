@@ -5,16 +5,21 @@ class ListItem extends React.Component {
     super(props);
     this.state = {
       color: this.props.tile.color,
-      display: this.props.tile.display
+      display: this.props.tile.display,
+      displayCustom: {display: 'none'}
     }
   }
   
 
-  toggleType(){
-    if( displayObj.display==='none'){
-      displayObj.display = 'table-row';
+  toggleTyping(){
+    if( this.state.displayCustom.display==='none'){
+      this.setState({
+        displayCustom: {display: 'table-row'}
+        });
     } else {
-      displayObj.display = 'none';
+        this.setState({
+          displayCustom: {display: 'none'}
+        });
     }
   }
 
@@ -43,10 +48,10 @@ class ListItem extends React.Component {
           <div className='word' onClick={this.toggleTile.bind(this)}>
             { this.props.tile.word }
           </div>
-          <button className="editText btn hidden-sm-down" style={{zIndex: 2}}onClick={(e)=> this.toggleType.bind(this)}>
+          <button className="editText btn hidden-sm-down" style={{zIndex: 2}}onClick={this.toggleTyping.bind(this)}>
             <span className="glyphicon glyphicon-pencil"></span>
           </button>
-          <div className='customWord' style={displayObj}>
+          <div className='customWord' style={this.state.displayCustom}>
             <input className="customWordForm form-control" type="text" onChange={(e) => this.props.tile.word = e.target.value} />
           </div>
         </div>      
