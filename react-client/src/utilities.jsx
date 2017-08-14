@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import cardList from './data/CardsAgainstHumanity.js';
 import API_KEY from './config/wordNik';
+var axios = require('axios');
 
 var whiteCards = cardList.cards.whiteCards;
 
@@ -85,6 +86,16 @@ var Utilities = {
     });
 
     console.log('save', this.state.board);
+    axios.post('/saveBoard', {
+      board: this.state.board,
+      theme: this.state.theme
+    })
+    .then(function(response){
+      console.log('saveboard', response);
+      this.setState({
+        boardID: response
+      });
+    });
     // switches the board to be uneditable and saves
     //makes a post
 	},
@@ -92,28 +103,20 @@ var Utilities = {
   tileClick(tile){
     //changes the tile to reveal color/team image when not in spymaster mode
     if(tile.color === 'blue'){
-      console.log('blue');
-      console.log(this);
       tile.isClicked = 1;
       return tile;
     }
     else if(tile.color === 'red'){
-      console.log('red');
-      console.log(this);
       tile.isClicked = 1;
       return tile;
     }
 
     else if(tile.color === 'yellow'){
-      console.log('yellow');
-      console.log(this);
       tile.isClicked = 1;
       return tile;
     
     }
     else if(tile.color === 'black'){
-      console.log('black');
-      console.log(this);
       tile.isClicked = 1;
       return tile;
     }

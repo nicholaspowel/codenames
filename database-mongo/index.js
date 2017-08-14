@@ -15,12 +15,12 @@ var BoardSchema = mongoose.Schema({
   boardId: mongoose.Schema.Types.ObjectId,
   boardName: String,
   theme: String,
-  words: []
+  board: []
 });
 
 var Board = mongoose.model('Board', BoardSchema);
 
-var selectAll = function(callback) {
+var retrieveBoard = function(callback) {
   Board.find({}, function(err, items) {
     if(err) {
       callback(err, null);
@@ -30,4 +30,12 @@ var selectAll = function(callback) {
   });
 };
 
-module.exports.selectAll = selectAll;
+var newBoard = function(data, callback) {
+  var board = new Board({
+    board: data.board,
+    theme: data.theme
+  });
+}
+
+module.exports.retrieveBoard = retrieveBoard;
+module.exports.newBoard = newBoard;

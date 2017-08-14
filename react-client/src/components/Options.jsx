@@ -16,7 +16,7 @@ class Options extends React.Component {
           <input className="form-control" type="text" onChange={(e) => console.log(e.target.value)} />
         </div>
         <button className="btn hidden-sm-down" onClick={(e)=> this.props.handleClick('search')}>
-          <span className="glyphicon glyphicon-search">Search</span>
+          <span className="glyphicon glyphicon-search">Load</span>
         </button>
         <div className="boardGen">
           <input className="form-control" type="text" onChange={(e) => this.props.Utilities.handleThemeChange.call(this, e.target.value)} />

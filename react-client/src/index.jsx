@@ -15,14 +15,15 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      board: []
+      board: [],
+      boardID: 'NA',
     },
     Utilities.randomCAH = Utilities.randomCAH.bind(this),
     Utilities.generate = Utilities.generate.bind(this),
     Utilities.tileClick = Utilities.tileClick.bind(this),
     Utilities.spyMaster = Utilities.spyMaster.bind(this),
-    Utilities.saveBoard = Utilities.saveBoard.bind(this)
-    
+    Utilities.saveBoard = Utilities.saveBoard.bind(this),
+    Utilities.handleThemeChange = Utilities.handleThemeChange.bind(this)
   } 
 
   colorize(array){
@@ -60,7 +61,7 @@ class App extends React.Component {
     return (<div>
       <h1>Code Names Against Humanity</h1>
       <Options Utilities = {Utilities}/>
-      <List board={this.state.board} Utilities = {Utilities}/>
+      <List board={this.state.board} boardID={this.state.boardID} Utilities = {Utilities}/>
     </div>)
   }
 }

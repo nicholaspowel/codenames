@@ -98,8 +98,13 @@ body {
 
 .editText {
     /* display: inline-grid; */
-    margin-left: -2.8%;
+    /*margin-left: -2.8%;*/
     background: rgba(0,0,0,0);
+    background-image: url(./images/sniper-297661_1280blue.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0px;
 }
 
 .customWordForm {
