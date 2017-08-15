@@ -14,7 +14,8 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 app.use(bodyParser.json());
 
 app.get('/boards', function (req, res) {
-  boards.retrieveBoard(function(err, data) {
+  console.log('get board', req.query);
+  boards.retrieveBoard(req.query, function(err, data) {
     if(err) {
       res.sendStatus(500);
     } else {

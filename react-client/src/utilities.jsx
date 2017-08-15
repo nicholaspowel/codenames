@@ -23,17 +23,17 @@ var Utilities = {
 	},
 
 	retrieveBoard(boardID){
-    //retrieve a board from the database
+    console.log('frontend retrieve', boardID)//retrieve a board from the database
     var that = this;
     axios.get('/boards', {
-      boardId: boardID
+      params: {boardId: boardID}
     })
     .then(function(response){
       console.log('loadBoard', response.data);
       that.setState({
-        board: response.data.board,
-        boardId: response.data.boardId,
-        theme: response.data.theme
+        board: response.data[0].board,
+        boardId: response.data[0].boardId,
+        theme: response.data[0].theme
       });
     });
 	},

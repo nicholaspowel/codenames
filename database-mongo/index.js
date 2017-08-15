@@ -20,8 +20,9 @@ var BoardSchema = new Schema({
 
 var Board = mongoose.model('Board', BoardSchema);
 
-var retrieveBoard = function(callback) {
-  Board.find({}, function(err, items) {
+var retrieveBoard = function(data, callback) {
+  console.log('retrieveBoard', data);
+  Board.find({boardId: data.boardId}, function(err, items) {
     if(err) {
       callback(err, null);
     } else {
