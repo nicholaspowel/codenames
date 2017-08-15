@@ -24,6 +24,7 @@ var Utilities = {
 
 	retrieveBoard(boardID){
     //retrieve a board from the database
+    var that = this;
     axios.get('/boards', {
       boardId: boardID
     })

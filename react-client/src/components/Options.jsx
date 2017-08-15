@@ -4,16 +4,24 @@ class Options extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      newBoardID: ''
     }
   }
+
+  handleBoardID(event){
+    this.setState({
+        newBoardID: event,
+      })
+  }
+
   render(){
     return(
       <div id='Options'>
         <h4> Options: </h4>
         <div className="boardSearch">
-          <input className="form-control" type="text" onChange={(e) => console.log(e.target.value)} />
+          <input className="form-control" type="text" onChange={(e) => this.handleBoardID(e.target.value)} />
         </div>
-        <button className="btn hidden-sm-down" onClick={(e)=> this.props.handleClick('search')}>
+        <button className="btn hidden-sm-down" onClick={(e)=> this.props.Utilities.retrieveBoard(this.state.newBoardID)}>
           <span className="glyphicon glyphicon-search">Load</span>
         </button>
         <div className="boardGen">
