@@ -32,7 +32,7 @@ var Utilities = {
       console.log('loadBoard', response.data);
       that.setState({
         board: response.data[0].board,
-        boardId: response.data[0].boardId,
+        boardID: response.data[0].boardId,
         theme: response.data[0].theme
       });
     });
@@ -56,7 +56,7 @@ var Utilities = {
         this.setState({
           board: data,
           theme: theme,
-          boardId: 'NA'
+          boardID: 'NA'
         })
       //create theme by calling the randomize function on the CAH white card array
     }
@@ -68,6 +68,8 @@ var Utilities = {
         data = this.colorize(data);
         this.setState({
           board: data,
+          theme: theme,
+          boardID: 'NA'
         })
       },
       error: (err) => {
@@ -78,7 +80,7 @@ var Utilities = {
         this.setState({
           board: data,
           theme: theme,
-          boardId: 'NA'
+          boardID: 'NA'
         })
       }
     })

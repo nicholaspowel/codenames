@@ -15,7 +15,7 @@
   "Who needs real names or humanity when you have Code Names Against Humanity!".
 
 ## How to Get Started ##
-  > Make two teams. One person from each team is your spymaster. THe spymasters know which tiles belong to which team. Their job is to get their teammates to guess the correct tiles with clues that consist of a single word and a number of tiles related to that way. The first team to go has 9 words to guess, and the second team has 8 words to guess in total. teams alternate guessing. Be careful though, there are tiles that belong to neither team, and at least one of those loses the game for the team that guesses it.
+  > Make two teams. One person from each team is your spymaster. Te spymasters know which tiles belong to which team. Their job is to get their teammates to guess the correct tiles with clues that consist of a single word and a number of tiles related to that word. The first team to go (blue) has 9 words to guess, and the second team (red) has 8 words to guess in total. teams alternate guessing. Be careful though, there are tiles that belong to neither team, and at least one of those loses the game for the team that guesses it.
 
 ## Technologies ##
 
