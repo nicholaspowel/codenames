@@ -55,7 +55,8 @@ var Utilities = {
         data = this.colorize(data);
         this.setState({
           board: data,
-          theme: theme
+          theme: theme,
+          boardId: 'NA'
         })
       //create theme by calling the randomize function on the CAH white card array
     }
@@ -76,6 +77,8 @@ var Utilities = {
         data = Utilities.setDisplay;
         this.setState({
           board: data,
+          theme: theme,
+          boardId: 'NA'
         })
       }
     })
