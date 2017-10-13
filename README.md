@@ -1,15 +1,16 @@
 # Code Names Against Humanity #
  
 ## For anyone who likes team games that involve guessing. ##
- >
 
-##Screen Shots##
-
-![](react-client/dist/images/CodeNamesBoard.png)
-
-![](react-client/dist/images/CodeNames%20SpyMaster.png)
 ## Summary ##
   It's Code Names, but for terrible people. Or immature people. Or just bored people.
+
+## Screen Shots ##
+Player View:
+![](react-client/dist/images/CodeNamesBoard.png)
+
+Spy Master View:
+![](react-client/dist/images/CodeNames%20SpyMaster.png)
 
 ## Problem ##
   > Other versions of Codenames either use the entire dictionary, or they restrict themslves to "Family Friendly" words. We don't role that way, and by default your boards start with words on the more innapropriate side of things. While you can still go the family friendly route, where's the fun in that? Boards can also be chosen by theme.
