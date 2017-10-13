@@ -6,7 +6,7 @@ var morgan = require('morgan');
 
 // require('bootstrap');
 var boards = require('../database-mongo');
-
+var PORT = process.env.PORT || 3000;
 var app = express();
 
 app.use(morgan('dev'));
@@ -36,7 +36,7 @@ app.post('/boards', function(req, res){
   });
 })
 
-app.listen(3000, function() {
-  console.log('listening on port 3000!');
+app.listen(PORT, function() {
+  console.log('listening on port' + PORT + '!');
 });
 
