@@ -7,7 +7,7 @@
     "start": "nodemon server/index.js && webpack -d --watch",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js",
-    "heroku-postbuild": "webpack -d ./webpack.config.js"
+    "heroku-postbuild": "webpack -d --watch"
   },
   "author": "Nick Powel",
   "license": "ISC",
