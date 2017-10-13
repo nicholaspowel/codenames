@@ -5,9 +5,9 @@
 
 ##Screen Shots##
 
-![](react-client/dist/images/CodeNamesBoard?raw=true)
+![](react-client/dist/images/CodeNamesBoard.png)
 
-![](react-client/dist/images/CodeNames%20SpyMaster?raw=true)
+![](react-client/dist/images/CodeNames%20SpyMaster.png)
 ## Summary ##
   It's Code Names, but for terrible people. Or immature people. Or just bored people.
 
