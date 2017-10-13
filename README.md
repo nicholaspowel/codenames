@@ -24,10 +24,8 @@ Spy Master View:
 ## How to Get Started ##
  Run ```npm install``` to install all node modules.
  
- Run ```npm run server-dev``` to run the server.
- 
- Run ```npm run react-dev``` to run webpack.
- 
+ Run ```npm start``` to run the server.
+
  Go to ```http://localhost:3000/``` to use.
  
  Make two teams. One person from each team is your spymaster.  The spymasters know which tiles belong to which team. Their job is to get their teammates to guess the correct tiles with clues that consist of a single word and a number of tiles related to that way. The first team to go has 9 words to guess, and the second team has 8 words to guess in total. teams alternate guessing. Be careful though, there are tiles that belong to neither team, and one of those (the assassin) loses the game for the team that guesses it.
